@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+# Dashboard README
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Approach to Building the Dashboard
 
-## Available Scripts
+The dashboard was built with the following goals in mind:
 
-In the project directory, you can run:
+### Responsiveness
+- Designed to adapt seamlessly to different screen sizes (desktop, tablet, and mobile).
+- Utilized **Tailwind CSS** for its utility-first approach, enabling rapid prototyping and fine-tuned responsive layouts.
 
-### `npm start`
+### Modern Aesthetic
+- Used **Tailwind’s gradient utilities**, padding, and rounded corners to create a clean and modern user interface.
+- Incorporated icons from **react-icons** for visual clarity and interactivity.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### User Interaction
+- Integrated clickable upload boxes with meaningful placeholder text and functionality.
+- Ensured that every interactive element, such as radio buttons and file upload boxes, is intuitive and visually accessible.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Alignment Consistency
+- Maintained visual alignment between elements such as step circles and connector lines in the progress bar.
+- Used standardized spacing and grid-based layouts for a cohesive structure.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Challenges Faced and Their Solutions
 
-### `npm run build`
+### 1. Circles and Line Alignment
+**Problem:**  
+Initially, the circles in the progress bar were misaligned with the connecting lines, causing inconsistencies in the visual flow.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Solution:**  
+- Adjusted the positioning of the lines using relative positioning (`top-1/2`) to ensure vertical alignment.
+- Fine-tuned the placement of dashed and solid lines with `translate-y` to ensure symmetry.
+- Applied conditional Tailwind classes to differentiate between completed, current, and upcoming steps.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2. File Upload Interaction
+**Problem:**  
+The upload boxes initially did not visually reflect the interaction.
 
-### `npm run eject`
+**Solution:**  
+- Added placeholder content to guide users (e.g., _"Write your statement here or upload a PDF"_).
+- Integrated `useRef` and `onClick` handlers for triggering file uploads, ensuring a smooth upload experience.
+- Alerted users with the file name upon upload to confirm successful selection.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3. Alignment and Spacing
+**Problem:**  
+Spacing inconsistencies between elements (e.g., between upload boxes, circles, and lines).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Solution:**  
+- Used Tailwind’s `gap`, `space-y`, and `space-x` utilities for consistent horizontal and vertical spacing.
+- Expanded the width of specific boxes for better visibility while maintaining alignment.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Assumptions Made
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 1. Tailwind CSS Framework
+- Assumed the project would use **Tailwind CSS** for styling to accelerate development and maintain consistency.
+- Leveraged its prebuilt utilities such as `grid`, `flex`, `rounded`, and `gap` for layout and design.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 2. Icons Library
+- Used **react-icons** for icons to avoid the overhead of designing custom SVGs.
 
-### Code Splitting
+### 3. File Upload Functionality
+- Assumed basic file upload functionality with no server-side integration.
+- Implemented only client-side handlers to alert users upon file selection.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 4. Desktop-First Design
+- Designed primarily for desktop users but ensured a responsive layout for mobile and tablet devices using Tailwind’s responsive breakpoints (e.g., `md:grid-cols-3`).
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Preview
+### Dashboard Features:
+1. **Progress Bar**: Dynamically displays the status of steps with proper alignment and spacing.
+2. **File Upload Sections**: Allows users to upload files interactively with visual feedback.
+3. **Responsive Design**: Adjusts seamlessly across devices (desktop, tablet, and mobile).
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Technologies Used
+- **React.js**: For building the dashboard components.
+- **Tailwind CSS**: For rapid and consistent styling.
+- **React Icons**: For modern and lightweight icon integration.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## How to Run the Dashboard
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/PrabhjotBajwa/Rise11_Dashboard.git
+2. Navigate to the project directory:
+   ```bash
+   cd Rise11_Dashboard
+3. Install dependencies:
+   ```bash
+   npm install
+4. Start the Development server:
+   ```bash
+   npm start
+5. Open your browser and go to http://localhost:3000.
 
-### Deployment
+## ScreenShots
+### Desktop View
+![Desktop View](./screenshots/laptop_view_Rise11.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Tablet View
+![Tablet View](./screenshots/tablet_view_Rise11.png)
 
-### `npm run build` fails to minify
+### Mobile View
+![Mobile View](./screenshots/mobile_view_Rise11.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
