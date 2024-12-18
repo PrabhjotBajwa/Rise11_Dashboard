@@ -102,12 +102,3 @@ Spacing inconsistencies between elements (e.g., between upload boxes, circles, a
 4.Start the development server:
    ```bash
    npm start
-5. Open your browser and go to http://localhost:3000
-
-## Screenshots Used
-1.Desktop View
-2.Tablet View
-3.Mobile View
-
-
-
