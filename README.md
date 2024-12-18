@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+Dashboard README
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Approach to Building the Dashboard
 
-## Available Scripts
+The dashboard was built with the following goals in mind:
 
-In the project directory, you can run:
+Responsiveness:
 
-### `npm start`
+Designed to adapt seamlessly to different screen sizes (desktop, tablet, and mobile). Tailwind CSS was used extensively for its utility-first approach, enabling rapid prototyping and fine-tuned responsive layouts.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Modern Aesthetic:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Used Tailwind’s gradient utilities, padding, and rounded corners to create a clean and modern user interface.
 
-### `npm test`
+Icons from react-icons were utilized for visual clarity and interactivity.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+User Interaction:
 
-### `npm run build`
+Integrated clickable upload boxes with meaningful placeholder text and functionality.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Ensured that every interactive element, such as radio buttons and file upload boxes, is intuitive and visually accessible.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Alignment Consistency:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Maintained visual alignment between elements such as step circles and connector lines in the progress bar.
 
-### `npm run eject`
+Implemented standardized spacing and grid-based layouts for a cohesive structure.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Challenges Faced and Their Solutions
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Circles and Line Alignment:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Problem: Initially, the circles in the progress bar were misaligned with the connecting lines, causing inconsistencies in the visual flow.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Solution: Adjusted the positioning of the lines using relative positioning (top-1/2) to ensure vertical alignment. Additionally:
 
-## Learn More
+Fine-tuned the placement of dashed and solid lines with translate-y to ensure symmetry.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Applied conditional Tailwind classes to differentiate between completed, current, and upcoming steps.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. File Upload Interaction:
 
-### Code Splitting
+Problem: The upload boxes initially did not visually reflect the interaction.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Solution:
 
-### Analyzing the Bundle Size
+Added placeholder content to guide users (e.g., "Write your statement here or upload a PDF").
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Integrated useRef and onClick handlers for triggering file uploads, ensuring a smooth upload experience.
 
-### Making a Progressive Web App
+Alerted users with the file name upon upload to confirm successful selection.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. Alignment and Spacing:
 
-### Advanced Configuration
+Problem: Spacing inconsistencies between elements (e.g., between upload boxes, circles, and lines).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Solution:
 
-### Deployment
+Used Tailwind’s gap, space-y, and space-x utilities for consistent horizontal and vertical spacing.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Expanded the width of specific boxes for better visibility while maintaining alignment.
 
-### `npm run build` fails to minify
+Assumptions Made:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1.Tailwind CSS Framework:
+
+Assumed the project would use Tailwind CSS for styling to accelerate development and maintain consistency.
+
+Leveraged its prebuilt utilities such as grid, flex, rounded, and gap for layout and design.
+
+2.Icons Library:
+
+Used react-icons for icons to avoid the overhead of designing custom SVGs.
+
+3.File Upload Functionality:
+
+Assumed basic file upload functionality with no server-side integration. Implemented only client-side handlers to alert users upon file selection.
+
+4.Desktop-First Design:
+
+Designed primarily for desktop users but ensured a responsive layout for mobile and tablet devices using Tailwind’s responsive breakpoints (e.g., md:grid-cols-3).
