@@ -106,7 +106,7 @@ Spacing inconsistencies between elements (e.g., between upload boxes, circles, a
 
 ## ScreenShots
 ### Desktop View
-![Desktop View](./screenshots/laptop_view_Rise11.png)
+![Desktop View](.src/screenshots/laptop_view_Rise11.png)
 
 ### Tablet View
 ![Tablet View](./screenshots/tablet_view_Rise11.png)
