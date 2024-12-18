@@ -99,6 +99,13 @@ Spacing inconsistencies between elements (e.g., between upload boxes, circles, a
 3. Install dependencies:
    ```bash
    npm install
-4.Start the development server:
+4. Start the Development server:
    ```bash
    npm start
+5. Open your browser and go to http://localhost:3000.
+
+## ScreenShots
+- **Desktop View**:
+- **Tablet View**:
+- **Mobile View**:
+
